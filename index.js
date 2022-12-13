@@ -1,11 +1,19 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const getNumbers = {};
+  for (const number of array){
+    const complementary = target - number;
+    if (complementary in getNumbers) return true;
+    getNumbers[number] = true;
+}
+return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  0((n)*2 +3)
 */
-
+ 
 /* 
   Add your pseudocode here
 */
